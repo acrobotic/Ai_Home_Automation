@@ -1,0 +1,11 @@
+sudo raspi-config
+SPI Loaded By Default (A5) > Yes
+
+wget https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/plain/Documentation/spi/spidev_test.c?id=95b1ed2ac7ffe3205afc6f5a20320fbdb984da92
+mv spidev_test.c\?id\=95b1ed2ac7ffe3205afc6f5a20320fbdb984da92 spidev_test.c
+gcc spidev_test.c 
+sudo modprobe spi_bcm2708
+./a.out 
+sudo ./a.out 
+lsmod | grep spi
+sudo apt-get upgrade
