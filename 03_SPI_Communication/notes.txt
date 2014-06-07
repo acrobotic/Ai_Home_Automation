@@ -9,3 +9,10 @@ sudo modprobe spi_bcm2708
 sudo ./a.out 
 lsmod | grep spi
 sudo apt-get upgrade
+
+sudo apt-get install python-dev
+git clone https://github.com/lthiery/SPI-Py
+cd SPI-Py/
+python setup.py build
+cp build/lib.linux-armv6l-2.7/spi.so .
+sudo python
