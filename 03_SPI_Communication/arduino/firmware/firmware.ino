@@ -12,8 +12,9 @@ volatile boolean process_it;
  
 void setup (void)
 {
+  
   Serial.begin (115200);   // debugging
- 
+  Serial.println("Initialized");
   // have to send on master in, *slave out*
   pinMode(MISO, OUTPUT);
   
@@ -41,7 +42,7 @@ byte c = SPDR;  // grab byte from SPI Data Register
     buf [pos++] = c;
     
     // example: newline means time to process buffer
-    if (c == '\n')
+    if (c == 5)
       process_it = true;
       
     }  // end of room available
@@ -54,6 +55,7 @@ void loop (void)
     {
     buf [pos] = 0;  
     Serial.println (buf);
+    Serial.println("WTF");
     pos = 0;
     process_it = false;
     }  // end of flag set
