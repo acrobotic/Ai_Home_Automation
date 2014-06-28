@@ -14,5 +14,11 @@ sudo apt-get install python-dev
 git clone https://github.com/lthiery/SPI-Py
 cd SPI-Py/
 python setup.py build
-cp build/lib.linux-armv6l-2.7/spi.so .
+cp build/lib.linux-armv6l-2.7/spi.so ../rpi/spidev_test/ #or wherever we have a script importing spi
 sudo python
+
+git clone https://github.com/WiringPi/WiringPi2-Python
+sudo apt-get install python-setuptools
+cd WiringPi2-Python
+python setup.py build
+sudo python setup.py install

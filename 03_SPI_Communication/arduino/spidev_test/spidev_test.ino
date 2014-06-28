@@ -1,6 +1,6 @@
 /**
  * Send arbitrary number of bits at whatever clock rate (tested at 500 KHZ and 500 HZ).
- * This script will capture the SPI bytes, when a '\n' is recieved it will then output
+ * This script will capture the SPI bytes, when a '5' is recieved it will then output
  * the captured byte stream via the serial.
  */
  
@@ -54,8 +54,8 @@ void loop (void)
   if (process_it)
     {
     buf [pos] = 0;  
-    Serial.println("WTF");
-    SPI.transfer(1);
+    Serial.println("Received a 5");
+    //SPI.transfer(1);
     pos = 0;
     process_it = false;
     }  // end of flag set
