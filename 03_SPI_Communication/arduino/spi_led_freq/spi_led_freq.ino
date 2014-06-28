@@ -54,8 +54,8 @@ void loop (void)
   if (process_it)
     {
     buf [pos] = 0;  
-    Serial.println (buf);
     Serial.println("WTF");
+    SPI.transfer(1);
     pos = 0;
     process_it = false;
     }  // end of flag set
