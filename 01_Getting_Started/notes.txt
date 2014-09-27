@@ -5,3 +5,6 @@ havoc:Desktop xisco$ cat /private/var/db/dhcpd_leases
 Linux:
 cat /var/lib/misc/dnsmasq.leases
 
+Windows:
+http://pihw.wordpress.com/guides/direct-network-connection/
+Step 2 - Put IP Address at the end of the file (make 2 copies of cmline.normal and data) type ip address on cmdline.txt
