@@ -1,3 +1,8 @@
+Flashing:
+diskutil unmountDisk /dev/disk2
+sudo dd bs=1m if=~/Downloads/2014-09-09-wheezy-raspbian.img of=/dev/rdisk2
+
+
 OSX:
 havoc:Desktop xisco$ sudo /bin/launchctl unload -w /System/Library/LaunchDaemons/bootps.plist
 havoc:Desktop xisco$ cat /private/var/db/dhcpd_leases
