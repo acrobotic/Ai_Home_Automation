@@ -31,3 +31,4 @@ iface wlan0 inet manual
 wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
 iface default inet dhcp
 ````
+1. Either `sudo reboot` or `sudo /etc/init.d/networking restart` to apply the changes. If you are connected over SSH, you will get disconnected.
